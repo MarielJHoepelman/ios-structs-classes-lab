@@ -20,13 +20,21 @@ let fred = Giant()
 Will these three lines of code run? If not, why not?
 
 ```swift
-fred.name = "Brick"
-fred.weight = 999.2
-fred.homePlanet = "Mars"
+fred.name = "Brick" //would run because the property name is mutable
+fred.weight = 999.2 //would run because the property name is mutable
+fred.homePlanet = "Mars" //would'n run because property 'homePlanet' is a non-mutable constant
 ```
 
 Fix the class definition for `Giant` in the space below so that it **does** work:
+```swift
+class Giant {
+    var name: String = "Fred"
+    var weight: Double = 340.0
+    var homePlanet: String = "Earth"
+}
 
+let fred = Giant()
+```
 
 ## Question 2
 
@@ -47,11 +55,18 @@ Will these three lines of code run? If so, why not?
 bilbo.name = "Jake"
 bilbo.height = 1.42
 bilbo.homePlanet = "Saturn"
+//It wouldn't because bilbo was initialized as a constant and constant can not be mutated.
 ```
 
 Change the declaration of `bilbo` so that the above three lines of code **do** work:
-
-
+```swift
+struct Alien {
+    var name: String
+    var height: Double
+    var homePlanet: String
+}
+var bilbo = Alien(name: "Bilbo", height: 1.67, homePlanet: "Venus")
+```
 ## Question 3
 
 Consider this bit of code that uses the `Giant` class:
@@ -64,7 +79,15 @@ jason.name = "Jason"
 ```
 
 What will the value of `edgar.name` be after those three lines of code are run? What will the value of `jason.name` be? Why?
+```swift
+//it would not run because edgar was declared as a constant property with no value in first line.
 
+//line 'edgar.name = "edgar"'cannot assign value because edgar is a constat and is not well formatted (declaration missing var/let).
+
+//the value of jason could never be instanciated because edgar is not mutable and it doesnt have any value.
+
+//line 'jason.name = "Jason"'cannot assign value because edgar is a constat and is not well formatted (declaration missing var/let).
+```
 
 ## Question 4
 
@@ -77,6 +100,12 @@ charlesFromJupiter.homePlanet = "Jupiter"
 ```
 
 What will the value of `charles.homePlanet` be after the above code run? What about the value of `charlesFromJupiter.homePlanet`? Why?
+
+```swift 
+//'charles.homePlanet' would print Pluto which is the initial value given to the property homePlanet when charles was instantiated. 
+
+//`charlesFromJupiter.homePlanet` would print Jupiter because value of property homePlanet was reassigned. 
+```
 
 
 ## Question 5
