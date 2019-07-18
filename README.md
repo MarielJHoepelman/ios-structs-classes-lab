@@ -123,9 +123,27 @@ struct BankAccount {
 }
 ```
 
-Does this code work? Why or why not?
+Does this code work? Why or why not? 
+```swift
+//code does not work because self.balance cannot be modified unless func is a mutating func.
+```
 
 Fix the `BankAccount` struct so it does work.
+
+```swift
+struct BankAccount {
+    var owner: String
+    var balance: Double
+
+mutating func deposit(_ amount: Double) {
+    balance += amount
+}
+
+mutating func withdraw(_ amount: Double) {
+    balance -= amount
+    }
+}
+```
 
 Given the code below (which should incorporate any fixes you made):
 
@@ -136,7 +154,11 @@ joeAccount.withdraw(50.0)
 ```
 
 What will the value of `joeAccount.balance` be after the above code runs? What about the value of `joeOtherAccount.balance`? Why?
-
+```swift
+//since struc is value type and saves both instances in memory without overwriting the original instance:
+//'joeAccount.balance` prints 100.0, the initial value with which joe's account was instantiated.
+ //`joeOtherAccount.balance' is $100 because withdraw from joeAccount does not change the original value of balance in joeOtherAccount.
+```
 
 ## Question 6
 
