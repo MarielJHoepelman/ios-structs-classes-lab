@@ -80,13 +80,10 @@ jason.name = "Jason"
 
 What will the value of `edgar.name` be after those three lines of code are run? What will the value of `jason.name` be? Why?
 ```swift
-//it would not run because edgar was declared as a constant property with no value in first line.
-
-//line 'edgar.name = "edgar"'cannot assign value because edgar is a constat and is not well formatted (declaration missing var/let).
-
-//the value of jason could never be instanciated because edgar is not mutable and it doesnt have any value.
-
-//line 'jason.name = "Jason"'cannot assign value because edgar is a constat and is not well formatted (declaration missing var/let).
+//initial value of edgar.name property name is edgar (name property is mutable)
+//the initial value of jason.name is edgar.name which is edgar.
+//the reassigned value of jason. name is Jason and after reassigment of value edgar.name is also Jason.
+//This is because 1 this is a class which is reference type and also because the property name of the class Giant is a mutable variable.
 ```
 
 ## Question 4
@@ -106,7 +103,6 @@ What will the value of `charles.homePlanet` be after the above code run? What ab
 
 //`charlesFromJupiter.homePlanet` would print Jupiter because value of property homePlanet was reassigned. 
 ```
-
 
 ## Question 5
 
