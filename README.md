@@ -163,7 +163,20 @@ What will the value of `joeAccount.balance` be after the above code runs? What a
 ## Question 6
 
 a. Write a struct called `Person` that has 3 properties of type `String`: a first name, a last name and a middle name. Have the middle name be optional. Create 2 instances of a `Person`, one with a middle name and one without. Print one of their first names.
+```swift
+struct Person {
+    var firstName: String
+    var lastName: String
+    var middleName: String?
+}
 
+let mariel = Person(firstName: "Mariel", lastName: "Hoepelman", middleName: "Josefina")
+let sophia = Person(firstName: "Sophia", lastName: "Garcia", middleName: "")
+print("\(mariel.firstName)")
+//prints Mariel 
+print("\(sophia.firstName)")
+//prints Sophia
+```
 
 b. Write a method in `Person` called `fullName` that will return a formatted string of an instance's full name. Call this method on both the instances you created in part a.
 
