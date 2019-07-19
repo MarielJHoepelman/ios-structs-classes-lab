@@ -55,7 +55,7 @@ Will these three lines of code run? If so, why not?
 bilbo.name = "Jake"
 bilbo.height = 1.42
 bilbo.homePlanet = "Saturn"
-//It wouldn't because bilbo was initialized as a constant and constant can not be mutated.
+//It wouldn't because bilbo was initialized as a constants and constant cannot be mutated.
 ```
 
 Change the declaration of `bilbo` so that the above three lines of code **do** work:
@@ -82,8 +82,8 @@ What will the value of `edgar.name` be after those three lines of code are run? 
 ```swift
 //initial value of edgar.name property name is edgar (name property is mutable)
 //the initial value of jason.name is edgar.name which is edgar.
-//the reassigned value of jason. name is Jason and after reassigment of value edgar.name is also Jason.
-//This is because 1 this is a class which is reference type and also because the property name of the class Giant is a mutable variable.
+//the reassigned value of jason.name is Jason and after reassigment of value edgar.name is also Jason.
+//This is because this is a class which is reference type and also because the property name of the class Giant is a mutable variable.
 ```
 
 ## Question 4
