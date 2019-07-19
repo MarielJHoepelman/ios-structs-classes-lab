@@ -270,6 +270,75 @@ e. Add a type property called `count` that keeps track of how many dogs have bee
 //Ex: There have been four dogs created so far
 `Dog.count //returns 4`
 
+```swift
+class Dog {
+    var name = "dog"
+    var breed = "unknown"
+    var mood = "calm"
+    var hungry = false
+
+    static var dogCount: Int = 0 //static = class variable to be used inside of class only. Variable stored all new instances of Dog
+
+    init(){
+        Dog.dogCount += 1 //init is a call back function, can access class variables and instance variables. This initializes new instances of Dog class. adds all new instances of Dog to variable dogCount
+    
+
+    func playFetch() {
+        hungry = true
+        mood = "playfull"
+        print("Ruff!")
+    }
+
+    func feed() {
+        hungry = false
+        print("Woof!")
+    }
+
+    func toString() -> String {
+        return "Name: \(name)\nBreed: \(breed)\nMood: \(mood)"
+    }
+
+    //class func cannot be called from an instance just the class itself (i.e 'Dog')
+    class func count() -> Int {
+        return self.dogCount
+    }
+}
+
+var dog1 = Dog()
+dog1.name //returns "dog"
+dog1.breed //returns "unknown"
+dog1.mood //returns "calm"
+dog1.hungry //returns false
+
+var dog2 = Dog()
+dog2.name = "Rhett"
+dog2.breed = "English Setter"
+dog2.mood = "excited"
+dog2.hungry = false
+
+dog2.playFetch() //prints "Ruff!"
+dog2.hungry //returns true
+dog2.mood //returns "playful"
+
+var dog3 = Dog()
+dog3.name = "Partner"
+dog3.breed = "Golden Retriever"
+dog3.mood = "thoughtful"
+dog3.hungry = true
+
+dog3.feed() //prints "Woof!"
+dog3.hungry //returns false
+
+var dog4 = Dog()
+dog4.name = "Rascal"
+dog4.breed = "Golden Retriever"
+dog4.mood = "feeling pawesome"
+dog4.hungry = true
+print(dog4.toString())
+
+print(Dog.count())
+```
+
 
 ## Question 9
 
