@@ -188,6 +188,20 @@ a. Create a struct called `Book` that has properties `title`, `author` and `rati
 
 b. Add a method to `Book` called `isGood` that returns `true` if its rating is greater than or equal to 7
 
+```swift
+struct Book {
+    var title: String
+    var author: String
+    var rating: Double
+
+    func isGood() -> Bool {
+        return rating >= 7
+    }
+}
+let goodBook = Book(title: "Becoming", author: "The Queen Michelle Obama", rating: 10.0)
+goodBook.isGood()
+```
+
 
 ## Question 8
 
