@@ -287,12 +287,26 @@ Create a struct called `RGBColor` that has 3 properties, `red`, `green`, `blue` 
 Given the below array of color dictionaries, create an array of `RGBColor`.
 
 ```swift
-let colorDictArray: [[String: Double]] = [["red": 1.0, "green": 0.0, "blue": 0.0],
- ["red": 0.0, "green": 1.0, "blue": 0.0],
- ["red": 0.0, "green": 0.0, "blue": 1.0],
- ["red": 0.6, "green": 0.9, "blue": 0.0],
- ["red": 0.2, "green": 0.2, "blue": 0.5],
- ["red": 0.5, "green": 0.1, "blue": 0.9],]
+
+//IN PROGRESS, NOT DONE YET
+let colorDictArray: [[String: Double]] = [["red": 1.0, "green": 0.0, "blue": 0.0], ["red": 0.0, "green": 1.0, "blue": 0.0], ["red": 0.0, "green": 0.0, "blue": 1.0], ["red": 0.6, "green": 0.9, "blue": 0.0], ["red": 0.2, "green": 0.2, "blue": 0.5], ["red": 0.5, "green": 0.1, "blue": 0.9],]
+
+struct RGCcolor {
+var red: Double
+var green: Double
+var blue: Double
+
+var rgbColors:[[String: Double]] = []
+
+func color(array: [[String: Double]]) -> [[String: Double]] {
+for outerIndex in colorDictArray {
+for innerIndex in outerIndex {
+
+}
+}
+return rgbColors
+}
+}
 ```
 
 
